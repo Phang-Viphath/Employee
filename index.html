@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Information and Bonus Calculation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 90%;
+            width: 400px;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #007bff;
+        }
+        button {
+            width: 100%;
+            font-size: 18px;
+        }
+        h4 {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #333;
+        }
+        @media (max-width: 576px) {
+            .container {
+                width: 100%;
+                padding: 15px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+            button {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body class="d-flex justify-content-center align-items-center vh-100">
+
+    <div class="container">
+        <h2 class="mb-4">Employee Details</h2>
+        <div class="mb-3">
+            <input type="text" id="employeeID" placeholder="Employee ID" class="form-control">
+        </div>
+        <div class="mb-3">
+            <input type="text" id="employeeName" placeholder="Name" class="form-control">
+        </div>
+        <div class="mb-3">
+            <input type="text" id="employeeSex" placeholder="Sex" class="form-control">
+        </div>
+        <div class="mb-3">
+            <input type="number" id="employeeSalary" placeholder="Salary" class="form-control" min="0" step="0.01">
+        </div>
+        <div class="mb-3">
+            <input type="text" id="employeePosition" placeholder="Position (Manager, Accounting, IT, etc.)" class="form-control">
+        </div>
+        <button class="btn btn-primary" onclick="calculateBonus()">Submit</button>
+        
+        <div id="employeeDetails"></div>
+        <h4>Bonus: <span id="employeeBonus"></span>%</h4>
+        <h4>Total Salary: <span id="TotalSalary"></span>$</h4>
+    </div>
+    <script src="javas.js"></script>
+</body>
+</html>
