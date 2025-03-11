@@ -20,6 +20,6 @@ function calculateBonus() {
     var bonus = employeeSalary * bonusPercentage;
     var totalSalary = employeeSalary + bonus;
 
-    document.getElementById('employeeBonus').textContent = `${(bonusPercentage * 100)}%`;
+    document.getElementById('employeeBonus').textContent = `${(bonusPercentage * 100)}`;
     document.getElementById('TotalSalary').textContent = totalSalary;
 }
